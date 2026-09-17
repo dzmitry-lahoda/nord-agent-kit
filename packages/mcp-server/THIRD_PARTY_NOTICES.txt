@@ -1,0 +1,28 @@
+Nord MCP supplemental third-party notices
+
+Nord MCP's own code is licensed under Apache-2.0. Third-party components
+retain their own licenses. Additional notices preserved from bundled code
+are in dist/cli.js.LEGAL.txt.
+
+rpc-websockets
+Copyright (c) Elpheria j.d.o.o.
+License: LGPL-3.0-only
+Source project: https://github.com/elpheria/rpc-websockets
+
+The CLI bundle includes rpc-websockets through its Solana dependencies,
+including the Nord SDK's prebuilt code. The directly resolved package is
+rpc-websockets@9.3.10; this version does not identify copies already embedded
+inside the upstream SDK.
+
+See licenses/rpc-websockets.LICENSE.txt for the upstream notice and
+licenses/LGPL-3.0-only.txt and licenses/GPL-3.0-only.txt for the license terms.
+This package imposes no additional restriction on modifying the LGPL-covered
+portions or reverse engineering to debug those modifications.
+
+@wallet-standard/app@1.1.1
+Author: Solana Maintainers <maintainers@solana.foundation>
+License: Apache-2.0
+Source project: https://github.com/wallet-standard/wallet-standard
+
+The browser authorization script incorporates this library, transformed
+by esbuild. See licenses/wallet-standard-app.LICENSE.txt.

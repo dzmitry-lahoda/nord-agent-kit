@@ -1,0 +1,12 @@
+<evaluation>
+  <qa_pair><question>Inspect the connected Nord profile. Which network is selected? Return only its name.</question><answer>devnet</answer></qa_pair>
+  <qa_pair><question>Inspect the account. What is its USD token balance, without rounding? Return only the decimal amount.</question><answer>1234.56789</answer></qa_pair>
+  <qa_pair><question>Discover SOLUSD and inspect its capabilities. Can its RFQ request be cancelled using this package? Answer yes or no.</question><answer>no</answer></qa_pair>
+  <qa_pair><question>Find the current short position. Return its market ID and absolute base size separated by a comma.</question><answer>2,3</answer></qa_pair>
+  <qa_pair><question>Request order history with a page size of one and follow the returned cursor. What is the second order's exact ID?</question><answer>9007199254740994</answer></qa_pair>
+  <qa_pair><question>Inspect CLOB order 9007199254740993 and its fills. What base quantity has filled? Return only the amount.</question><answer>1</answer></qa_pair>
+  <qa_pair><question>Inspect the account's current open orders. What base quantity remains on order 9007199254740993? Return only the amount.</question><answer>1</answer></qa_pair>
+  <qa_pair><question>Inspect RFQ order 9007199254740994 and its fills. Did placement result in a fill? Answer yes or no.</question><answer>no</answer></qa_pair>
+  <qa_pair><question>Inspect request lost-response. Does the available evidence establish rejection, acceptance, or an unknown outcome? Return rejected, accepted, or unknown.</question><answer>unknown</answer></qa_pair>
+  <qa_pair><question>Inspect account risk and balances. Is authoritative equity returned, or is it unknown? Return known or unknown.</question><answer>unknown</answer></qa_pair>
+</evaluation>

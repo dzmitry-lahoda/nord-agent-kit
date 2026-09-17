@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Authorize Nord MCP</title>
+    <link rel="stylesheet" href="/browser.css" />
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <span>Nord</span><span class="badge">MCP</span>
+      </header>
+      <div class="card">
+        <header class="intro">
+          <p class="eyebrow" id="step">Step 1 of 2 · Connect</p>
+          <h1 id="heading" tabindex="-1">Connect your wallet</h1>
+          <p id="description">
+            Choose the Solana wallet that owns your Nord account to set up
+            access for your local agent.
+          </p>
+        </header>
+        <div class="content" id="flow">
+          <section id="wallet-selection" aria-label="Available wallets">
+            <div id="wallets"></div>
+            <p class="empty" id="wallet-help" hidden>
+              No compatible wallet detected. Open this setup URL in a browser
+              with Phantom or Solflare installed and unlocked. Your wallet must
+              support Solana message signing.
+            </p>
+          </section>
+          <p id="connected-wallet" class="connected" hidden></p>
+          <section id="parameters" aria-label="Session details" hidden>
+            <dl>
+              <div>
+                <dt>Network</dt>
+                <dd><span id="network" class="badge"></span></dd>
+              </div>
+              <div>
+                <dt>Nord account</dt>
+                <dd id="account"></dd>
+              </div>
+              <div>
+                <dt>Owner wallet</dt>
+                <dd id="owner" class="address"></dd>
+              </div>
+              <div>
+                <dt>Session expires</dt>
+                <dd id="expiry"></dd>
+              </div>
+              <div>
+                <dt>Renewable until</dt>
+                <dd id="deadline"></dd>
+              </div>
+              <div>
+                <dt>Credential storage</dt>
+                <dd id="storage"></dd>
+              </div>
+            </dl>
+            <details>
+              <summary>Session public key</summary>
+              <p id="session-key" class="address"></p>
+            </details>
+            <p class="hint">
+              The session lasts up to 24 hours and can renew within the
+              authorization window shown above. All times are UTC.
+            </p>
+          </section>
+          <aside class="notice" aria-labelledby="authority-title">
+            <h2 id="authority-title">Understand this access</h2>
+            <p>
+              A Nord session key grants broader access than the agent’s trading
+              tools, including transfers and withdrawals. The selected account
+              is a local setting, not a protocol-enforced restriction.
+            </p>
+          </aside>
+          <p class="hint">
+            Your wallet’s private key stays in your wallet. The session key
+            stays with the local CLI.
+          </p>
+        </div>
+        <div class="feedback">
+          <p id="status" role="status"></p>
+          <p id="error" role="alert"></p>
+        </div>
+        <footer class="actions" id="actions">
+          <button id="approve" class="primary" type="button" hidden>
+            Approve in wallet
+          </button>
+          <button id="cancel" class="secondary" type="button">
+            Cancel setup
+          </button>
+        </footer>
+      </div>
+      <p class="footnote">
+        Local wallet authorization · Keep your setup URL private
+      </p>
+      <noscript
+        ><p class="notice">
+          JavaScript is required to connect your wallet. Enable it and open a
+          new setup URL from the CLI.
+        </p></noscript
+      >
+    </main>
+    <script type="module" src="/browser.js"></script>
+  </body>
+</html>

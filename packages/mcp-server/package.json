@@ -1,0 +1,76 @@
+{
+  "name": "@n1xyz/nord-mcp-server",
+  "version": "0.1.0-alpha.0",
+  "description": "Local Nord trading tools for MCP clients",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "bin": {
+    "nord-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "THIRD_PARTY_NOTICES.txt",
+    "licenses",
+    "docs",
+    "evaluations"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "fmt": "prettier --write src tests scripts *.json README.md docs evaluations/README.md",
+    "ci": "tsc --noEmit && eslint src tests scripts && prettier --check src tests scripts *.json README.md src/nord/README.md docs evaluations",
+    "lint": "eslint src tests scripts",
+    "prepack": "npm run build"
+  },
+  "optionalDependencies": {
+    "@napi-rs/keyring": "2.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "@modelcontextprotocol/client": "2.0.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@n1xyz/nord-ts": "0.7.4",
+    "@noble/ed25519": "^2.3.0",
+    "@solana/web3.js": "1.98.4",
+    "@types/node": "^22.15.0",
+    "@wallet-standard/app": "^1.1.0",
+    "@wallet-standard/base": "^1.1.0",
+    "decimal.js": "^10.6.0",
+    "esbuild": "^0.25.0",
+    "json-bigint": "^1.0.0",
+    "@types/json-bigint": "^1.0.4",
+    "prettier": "3.6.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.2",
+    "zod": "^4.0.0",
+    "eslint": "^9.33.0",
+    "@typescript-eslint/parser": "^8.39.1",
+    "@bufbuild/protobuf": "2.6.3",
+    "@n1xyz/proton": "0.1.0"
+  },
+  "overrides": {
+    "@bufbuild/protobuf": "2.6.3",
+    "@solana/web3.js": "1.98.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1xyz/nord-agent-kit.git",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://github.com/n1xyz/nord-agent-kit#readme",
+  "bugs": {
+    "url": "https://github.com/n1xyz/nord-agent-kit/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
