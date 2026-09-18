@@ -6,3 +6,9 @@ dist/
 .env
 .env.*
 !.env.example
+keypair.json
+
+# nix
+/result
+/result-*
+/.codex/config.toml
